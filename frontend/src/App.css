@@ -1,0 +1,161 @@
+/* frontend/src/App.css */
+
+/* 1) Full-page flex container to center the card */
+html, body {
+  /* height: 100%; */
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* 2) White card container */
+.App {
+  /* max-width: 800px; */
+  /* width: 100%; */
+ /* width: inherit; */
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+#container{
+    width: 100%;
+    height: 100%;
+}
+
+/* 3) Title styling */
+h1 {
+  text-align: center;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+/* 4) Form layout */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: #2d3748;
+  font-size: 1rem;
+  gap: 0.5rem;
+}
+
+input[type="file"] {
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f8fafc;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+input[type="file"]:hover {
+  border-color: #4299e1;
+  background-color: #ffffff;
+}
+
+input[type="file"]:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+/* 5) Button styling */
+button {
+  padding: 1rem 1.5rem;
+  background-color: #4299e1;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+}
+
+button:hover:not(:disabled) {
+  background-color: #3182ce;
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background-color: #a0aec0;
+}
+
+/* 6) Results box */
+.results {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  background-color: #f0f9ff;
+  border-radius: 12px;
+  color: #1a1a1a;
+  line-height: 1.6;
+  border: 1px solid #bee3f8;
+}
+
+.results h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #2d3748;
+  font-size: 1.5rem;
+}
+
+.results p {
+  margin: 0.75rem 0;
+  font-size: 1.1rem;
+}
+
+.results strong {
+  color: #2d3748;
+  font-weight: 600;
+}
+
+/* 7) Loading animation */
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+button:disabled {
+  animation: pulse 1.5s infinite;
+}
+
+/* 8) Responsive adjustments */
+@media (max-width: 640px) {
+  .App {
+    width: 95%;
+    padding: 1.5rem;
+    margin: 20px auto;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  .results {
+    padding: 1rem;
+  }
+}
